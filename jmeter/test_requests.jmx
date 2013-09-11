@@ -26,15 +26,6 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </SetupThreadGroup>
       <hashTree>
-        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="定数スループットタイマ" enabled="true">
-          <stringProp name="calcMode">this thread only</stringProp>
-          <doubleProp>
-            <name>throughput</name>
-            <value>300.0</value>
-            <savedValue>0.0</savedValue>
-          </doubleProp>
-        </ConstantThroughputTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP リクエスト" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="ユーザー定義変数" enabled="true">
             <collectionProp name="Arguments.arguments">
@@ -94,6 +85,11 @@
           </objProp>
           <stringProp name="filename"></stringProp>
         </ResultCollector>
+        <hashTree/>
+        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="ガウス乱数タイマ" enabled="true">
+          <stringProp name="ConstantTimer.delay">10</stringProp>
+          <stringProp name="RandomTimer.range">100.0</stringProp>
+        </GaussianRandomTimer>
         <hashTree/>
       </hashTree>
     </hashTree>
